@@ -38,7 +38,7 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/dost-exam.git
+   git clone https://github.com/PHDrew413/DOST_Labs_Exam.git
    cd dost-exam
    ```
 
