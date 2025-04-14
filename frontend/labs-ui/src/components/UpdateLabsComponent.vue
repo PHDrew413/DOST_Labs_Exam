@@ -77,13 +77,12 @@ const form = reactive({
   labDescriptions: '',
 })
 
-// UI feedback states
+
 const submitted = ref(false)
 const error = ref(false)
-const labResult = ref(null) // New variable to track lab update result
+const labResult = ref(null)
 
 const submitForm = async () => {
-  // Reset flags before submitting
   submitted.value = false
   error.value = false
   labResult.value = null
@@ -96,10 +95,9 @@ const submitForm = async () => {
     })
 
     console.log('Successfully updated:', response.data)
-    labResult.value = true  // Indicates a successful update
+    labResult.value = true 
     submitted.value = true
 
-    // Clear form fields after a successful update
     form.labID = ''
     form.labName = ''
     form.labInstructor = ''
@@ -107,7 +105,6 @@ const submitForm = async () => {
 
     setTimeout(() => (submitted.value = false), 3000)
   } catch (err) {
-    // Check if it's a 404 error, which means no lab was found
     if (err.response && err.response.status === 404) {
       labResult.value = false
       submitted.value = true

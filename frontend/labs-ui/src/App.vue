@@ -20,37 +20,25 @@
   </div>
 </template>
 
-<script>
-// Import your custom components
+<script setup>
+import { ref } from 'vue'
+
 import AddLabsComponent from './components/AddLabsComponent.vue'
 import ListLabsComponent from './components/ListLabsComponent.vue'
 import DeleteLabsComponent from './components/DeleteLabsComponent.vue'
 import SearchLabsComponent from './components/SearchLabsComponent.vue'
 import UpdateLabsComponent from './components/UpdateLabsComponent.vue'
-import WelcomeComponent from './components/WelcomeComponent.vue'
+import WelcomeComponent from './components/WelcomeComponent.vue' 
 
-export default {
-  name: 'App',
-  components: {
-    AddLabsComponent,
-    ListLabsComponent,
-    DeleteLabsComponent,
-    SearchLabsComponent,
-    UpdateLabsComponent,
-  },
-  data() {
-    return {
-      activeComponent: WelcomeComponent,
-      navItems: [
-        { name: 'All List', label: 'Lab List', component: ListLabsComponent },
-        { name: 'Add Lab', label: 'Add Lab', component: AddLabsComponent },
-        { name: 'Search Labs', label: 'Search Labs', component: SearchLabsComponent },
-        { name: 'Update Labs', label: 'Update Labs', component: UpdateLabsComponent },
-        { name: 'Delete Lab', label: 'Delete Lab', component: DeleteLabsComponent },
-        
-      ],
-    }
-  }
-}
+const activeComponent = ref(WelcomeComponent)
+
+const navItems = [
+  { name: 'All List', label: 'Lab List', component: ListLabsComponent },
+  { name: 'Add Lab', label: 'Add Lab', component: AddLabsComponent },
+  { name: 'Search Labs', label: 'Search Labs', component: SearchLabsComponent },
+  { name: 'Update Labs', label: 'Update Labs', component: UpdateLabsComponent },
+  { name: 'Delete Lab', label: 'Delete Lab', component: DeleteLabsComponent },
+]
+
 </script>
 

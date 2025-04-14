@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-  <div v-if="cards == 0" class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+  <div v-if="cards == 0 && error == false" class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
     <strong class="font-bold">Information: </strong>
     <span class="block sm:inline">No Labs Recorded</span>
   </div>
