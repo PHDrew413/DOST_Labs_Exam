@@ -38,7 +38,7 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/dost-exam.git
+   git clone https://github.com/PHDrew413/DOST_Labs_Exam.git
    cd dost-exam
    ```
 
@@ -53,4 +53,4 @@ Ensure you have the following installed:
 
 3. **Start and Initialize the Project:**
 
-    Once the containers are up and running, open your browser and navigate to the specified local server URLs (usually provided in the docker-compose.yml file or via console output).
+    Once the containers are up and running, open your browser and navigate to the specified local server URLs (usually provided in the docker-compose.yml file or via console output / http://localhost:5173/ ).
